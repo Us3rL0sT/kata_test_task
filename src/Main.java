@@ -154,6 +154,13 @@ public class Main {
                         System.out.println(result);
                         return result;
                     }
+                    default -> {
+                        try {
+                            throw new Exception();
+                        } catch (Exception e) {
+                            System.out.println("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+                        }
+                    }
                 }
             }
             else if ((rim1 && !rim2) || (!rim1 && rim2)) {
